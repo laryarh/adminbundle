@@ -1,0 +1,50 @@
+{
+    "name": "laryarh/adminbundle",
+    "description": "Laravel admin bundle",
+    "keywords": [
+        "laryarh",
+        "adminbundle"
+    ],
+    "homepage": "https://github.com/laryarh/adminbundle",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Yaroslav Khyzhniak",
+            "email": "developer.yarkh479@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "illuminate/support": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Laryarh\\Adminbundle\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Laryarh\\Adminbundle\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laryarh\\Adminbundle\\AdminbundleServiceProvider"
+            ],
+            "aliases": {
+                "Adminbundle": "Laryarh\\Adminbundle\\AdminbundleFacade"
+            }
+        }
+    }
+}
